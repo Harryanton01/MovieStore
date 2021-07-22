@@ -3,11 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+import cartReducer from './services/reducers/cart';
+import currencyReducer from './services/reducers/currency';
+import thunk from 'redux-thunk'
+import { BrowserRouter} from 'react-router-dom';
+
+const middleware = [thunk];
+
+const rootReducer = combineReducers({
+  cart: cartReducer,
+  currency: currencyReducer
+})
+
+const store = createStore(rootReducer, applyMiddleware(...middleware));
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
