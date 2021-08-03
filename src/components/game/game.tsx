@@ -47,24 +47,24 @@ import Chip from '@material-ui/core/Chip';
         return(
             <StyledDiv>
                 <Grid container justify="flex-start" alignItems="center" spacing={1}>
-                    <Grid item md={1} style={{flexBasis: '0%', padding: 0}}>
+                    <Grid item md={1}>
                         <img src={this.props.game.img} alt="alt_text"/>
                     </Grid>
                     <Grid item md={2} >
-                        <StyledTypography variant={"body2"} style={{paddingLeft: 30}}>
+                        <StyledTypography variant={"body2"}>
                             {"Released - "}{this.props.game.description.release_date}
                         </StyledTypography>
-                        <StyledTypography variant={"body1"} style={{paddingLeft: 30}}>
+                        <StyledTypography variant={"body1"}>
                             {this.props.game.description.title}
                         </StyledTypography>
                     </Grid>
-                    <Grid item md={2} style={{textAlign: "left"}}>
+                    <Grid item md={2}>
                         <StyledTypography variant={"body2"}>
                             {"Rating"}
                         </StyledTypography>
                         <Rating defaultValue={this.props.game.rating} readOnly={true}/>
                     </Grid>
-                    <Grid item md={2} style={{textAlign: "left"}}>
+                    <Grid item md={2}>
                         <StyledTypography variant={"body2"} >
                             {"Tags"}
                         </StyledTypography>
@@ -72,7 +72,7 @@ import Chip from '@material-ui/core/Chip';
                                 return <Chip key={index} label={item} />
                         })}
                     </Grid>
-                    <Grid item md={2} style={{textAlign: "left"}}>
+                    <Grid item md={2}>
                         <StyledTypography variant={"body2"}>
                             {"Quantity"}
                         </StyledTypography>
@@ -86,10 +86,10 @@ import Chip from '@material-ui/core/Chip';
                             <AddIcon />
                         </IconButton>
                     </Grid>
-                    <Grid item md={1} style={{textAlign: "left"}}>
+                    <Grid item md={1}>
                         <Currency value = {this.props.game.amount_usd} />
                     </Grid>
-                    <Grid item md={2} style={{textAlign: "right"}}>
+                    <Grid item md={2}>
                         {addGameButton}
                     </Grid>
                 </Grid>

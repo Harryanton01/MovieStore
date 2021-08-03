@@ -30,7 +30,7 @@ class Navbar extends React.Component<any, any> {
                             <Badge badgeContent={this.props.addedItems.length} color="secondary">
                                 <ShoppingCartIcon />
                             </Badge>
-                            <span style={{color: '#14F1AF', paddingLeft:10}}>
+                            <span>
                                 CHECKOUT
                             </span>
                         </IconButton>
@@ -43,8 +43,8 @@ class Navbar extends React.Component<any, any> {
                             value={this.props.currency}
                             onChange={(e: any) => this.handleChange(e.target.value)}
                         >
-                            <option value={Currencies.dollars} style={{color: '#1E2131'}}>USD ($)</option>
-                            <option value={Currencies.pounds} style={{color: '#1E2131'}}>GBP (£)</option>
+                            <option value={Currencies.dollars}>USD ($)</option>
+                            <option value={Currencies.pounds}>GBP (£)</option>
                         </Select>
                     </Grid>
                 </Grid>

@@ -68,7 +68,7 @@ export const StyledTypography = styled(Typography)`
     ${(props) =>
         props.variant==="body1" &&
         css`
-            font-weight: 700 !important;
+            font-weight: 700 ;
             text-align: left;
         `
     }
@@ -76,8 +76,9 @@ export const StyledTypography = styled(Typography)`
         props.variant==="body2" &&
         css`
             text-align: left;
+            padding-left:30px;
             color: #24997D;
-            font-size: 0.675rem !important;
+            font-size: 0.675rem ;
         `
     }
 `

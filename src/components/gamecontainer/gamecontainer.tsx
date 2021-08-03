@@ -8,13 +8,17 @@ const StyledDiv = styled.div`
     color: white;
 `;
 
+const GameDiv = styled.div`
+    padding-bottom:30px;
+`;
+
 class GameContainer extends React.Component<any, any> {
     render(){
         let itemList = games.map((item:any) => {
             return(
-                <div key={item.id} style={{paddingBottom: 30}}>
+                <GameDiv key={item.id}>
                     <Game key={item.id} game={item} />
-                </div>
+                </GameDiv>
             );
         });
         return(

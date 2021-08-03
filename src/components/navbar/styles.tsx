@@ -8,8 +8,8 @@ export const StyledDiv = styled.div`
             color:white;
     }
     .MuiIconButton-root{
-        color:white !important;
-        font-size: 12px !important;
+        color:white;
+        font-size: 12px;
     }
     .MuiBadge-colorSecondary{
         background-color: #14F1AF;
@@ -34,8 +34,8 @@ export const Title = styled(Typography)`
 ${(props) =>
     props.variant==="body1" &&
     css`
-        font-weight: 700 !important;
-        font-size: 1.5rem !important;
+        font-weight: 700;
+        font-size: 1.5rem;
         padding-top: 5px;
         padding-left: 50px;
         text-align: left;
